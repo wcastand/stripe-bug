@@ -8,14 +8,6 @@ export default function App() {
 		<StripeProvider publishableKey="pk_test_oKhSR5nslBRnBZpjO6KuzZeX">
 			<View style={styles.container}>
 				<CardForm
-					postalCodeEnabled={true}
-					placeholders={{
-						number: '4242 4242 4242 4242',
-					}}
-					cardStyle={{
-						backgroundColor: '#FFFFFF',
-						textColor: '#000000',
-					}}
 					style={{
 						width: '90%',
 						height: 500,
@@ -23,9 +15,6 @@ export default function App() {
 					}}
 					onCardChange={(cardDetails) => {
 						console.log('cardDetails', cardDetails)
-					}}
-					onFocus={(focusedField) => {
-						console.log('focusField', focusedField)
 					}}
 				/>
 			</View>
