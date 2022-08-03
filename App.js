@@ -1,7 +1,5 @@
-import { StyleSheet, View } from 'react-native'
-import { useColorScheme } from 'react-native'
+import { useColorScheme, Platform, StyleSheet, View } from 'react-native'
 import { CardForm, StripeProvider } from '@stripe/stripe-react-native'
-import { Platform } from 'react-native-web'
 
 export default function App() {
 	const color = useColorScheme()
@@ -11,7 +9,6 @@ export default function App() {
 			<View style={styles.container}>
 				<CardForm
 					style={{ width: '90%', height: 500, margin: 30 }}
-					cardStyle={{ backgroundColor: color === 'dark' ? 'white' : 'white' }}
 					onCardChange={(cardDetails) => console.log('cardDetails', cardDetails)}
 				/>
 			</View>
